@@ -121,8 +121,14 @@
                 width: 100% !important;
 
                 .info{
-                    background-color: #36454F;
-                    border-radius: 8px;
+                    // background-color: #36454F;
+                    // border-radius: 8px;
+                    border: 1px solid rgb(255, 255, 255);
+                    background: rgba(44,42,42,0.75);
+                    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+                    backdrop-filter: blur(1.9px);
+                    -webkit-backdrop-filter: blur(1.9px);
+                    border-radius: 10px;
                     margin: 1em .5em;
                     padding: .5em 0;
                 }
