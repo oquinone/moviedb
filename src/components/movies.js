@@ -8,7 +8,7 @@ import '../styling/movies.scss';
 
 export const Movies = () => {
     const { searchMe } = useSelector((state) => state.searching);
-    const [data, setData] = useState("");
+    const [data, setData] = useState(null);
 
     const fetchData = async () =>{
         const info = await movieData(searchMe);
@@ -19,6 +19,12 @@ export const Movies = () => {
         if(searchMe){ fetchData(); }
         // eslint-disable-next-line
     },[searchMe], [])
+
+    if(!data){
+        return(
+            <div>Loading...</div>
+        );
+    }
     
     return(
         <div className="main"
